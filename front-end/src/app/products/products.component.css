@@ -1,0 +1,59 @@
+h3, h4 {
+  margin: 20px;
+  font-size: 24px;
+}
+
+/* Style the table */
+table {
+  margin-left: 20px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #333;
+  padding: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+td {
+  padding: 20px 80px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td:hover {
+  background-color: wheat;
+  color: black;
+}
+
+.cartButton {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the button based on stock availability */
+.cartButton[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cartButton:not([disabled]) {
+  background-color: #007bff;
+}
+
+td.warning {
+  color: red;
+}
+
+/* .cartColumn {
+  margin-left: 20px;
+} */

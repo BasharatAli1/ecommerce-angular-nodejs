@@ -1,0 +1,64 @@
+<h3>{{ title }}</h3>
+<div class="row">
+  <div class="column">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Discounted Price</th>
+          <th>Stock Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of products">
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.discountedPrice ? item.discountedPrice : 'N/A' }}</td>
+          <td [class.warning]="item.stock === 0">{{ item.stock }}</td>
+          <td>
+            <button
+              class="cartButton"
+              [disabled]="item.stock === 0"
+              (click)="addToCart(item)"
+            >
+              {{ item.stock === 0 ? 'Out of Stock' : 'Add to Cart' }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div hide class="column cartColumn">
+    <h4>Cart</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Stock Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of cart">
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.discountedPrice ? item.discountedPrice : item.price }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>
+            <button
+              class="cartButton"
+              (click)="removeFromCart(item)"
+              style="background-color: red; color: white;"
+            > Remove </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
