@@ -54,6 +54,6 @@ td.warning {
   color: red;
 }
 
-/* .cartColumn {
-  margin-left: 20px;
-} */
+.margins {
+  margin: 20px;
+}

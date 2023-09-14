@@ -10,6 +10,7 @@ export class ProductsComponent {
   title = 'Products Listing!';
   products: any;
   cart: any[] = [];
+  total = 0;
 
   constructor(private dataService: DataService) {}
 
@@ -29,6 +30,7 @@ export class ProductsComponent {
       } else {
         this.cart.push({ ...item, quantity: 1 });
       }
+      this.total = this.total + parseFloat(item.price);
     }
   }
 
@@ -43,6 +45,7 @@ export class ProductsComponent {
         if(prod._id === cartItem._id)
           prod.stock += cartItem.quantity;
       });
+      this.total = this.total - parseFloat(cartItem.price);
     }
   }
 }

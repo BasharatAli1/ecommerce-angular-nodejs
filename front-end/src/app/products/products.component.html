@@ -48,7 +48,8 @@
         <tr>
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
-          <td>{{ item.discountedPrice ? item.discountedPrice : item.price }}</td>
+          <!-- <td>{{ item.discountedPrice ? item.discountedPrice : item.price }}</td> -->
+          <td>{{ item.price }}</td>
           <td>{{ item.quantity }}</td>
           <td>
             <button
@@ -60,5 +61,6 @@
         </tr>
       </tbody>
     </table>
+    <h4 class="margins">Total: {{ total }}</h4>
   </div>
 </div>
