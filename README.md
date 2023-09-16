@@ -31,9 +31,7 @@ $ cd ecommerce-angular-nodejs
 ### Running the Project
 These steps will help you run the project on your local machine.
 #### Front-end
-Open `cmd` or any terminal you like from the project directory and enter the following commands:
-
- 1. Open `cmd` for any other teminal you like and switch to the repository.
+ 1. Open `cmd` or any other teminal you like and switch to the repository.
 ```
 $ cd front-end
 ```
@@ -51,9 +49,8 @@ http://localhost:4200/
 ```
 
 #### Back-end
-Open `cmd` or any terminal you like from the project directory and enter the following commands:
 
- 1. Open `cmd` for any other teminal you like and switch to the repository.
+ 1. Open `cmd` or any other teminal you like and switch to the repository.
 ```
 $ cd back-end
 ```
